@@ -26,7 +26,7 @@ public abstract class Pokemon implements Serializable{
     // Getters & Setters //
 
     public String getNombre() { //✅
-        return this.nombre;
+        return nombre;
     }//cierra getNombre
 
     public double getSalud() { //✅
