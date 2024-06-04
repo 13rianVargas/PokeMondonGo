@@ -7,7 +7,7 @@ public class Batalla {
    
    public static String iniciarBatalla(Pokemon pokemon1, Pokemon pokemon2, boolean verif, String nombrePokemonGanador){
 
-      nombrePokemonGanador = "Pepe";
+      nombrePokemonGanador = "PEPE";
 
       while (verif == true){
 
