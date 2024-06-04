@@ -40,6 +40,7 @@ public class Principal {
     static int entrenadorBatalla2;
     static Pokemon pokemonBatalla1;
     static Pokemon pokemonBatalla2;
+    static Pokemon pokemonDeEntrenamiento;
 
     static boolean firstMenuGestionarEntrenadores = true;
     static boolean firstSubMenuSeleccionarEntrenadores = true;
@@ -90,7 +91,7 @@ public class Principal {
         pokemonesDisponibles = (LinkedList<Pokemon>)ArchivosConexion.leer(NOMBRE_ARCHIVO);
 
         interfazDeCarga(); //✅
-        interfazPokeMondonGo(); //✅
+        //interfazPokeMondonGo(); //✅
         menu1(); //✅
 
         sc.close(); //cierra Scanner
@@ -276,7 +277,7 @@ public class Principal {
 
                     for (int i = 0; i < pokeEntrenadores.size(); i++) {
                         String pokeNombre = pokeEntrenadores.get(i).getNombre();
-                        System.out.println("(" + (i+1) + ") | " + pokeNombre + " |");
+                        System.out.println(" > | " + pokeNombre + " |");
                     }//cierra for
 
                     System.out.println(" \n \n "); //Espacio visual
@@ -372,7 +373,7 @@ public class Principal {
                 System.out.println("(" + (i+1) + ") | " + pokeNombre + " |");
             }//cierra for
 
-            System.out.println(" \n \n "); //Espacio visual
+            System.out.println(""); //Espacio visual
 
             System.out.print("Selecciona el entrenador que deseas usar: ");
 
@@ -471,7 +472,7 @@ public class Principal {
                 subMenuNombreEntrenador(entrenadorSeleccionado);
 
                 break;
-            case 3: //✅
+            case 3: //PENDIENTE
 
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                 System.out.println("¡Has seleccionado « Entrenar pokémon » !");     
@@ -483,33 +484,40 @@ public class Principal {
 
                 wait(sg);
 
-                pokeEntrenadores.get(entrenadorSeleccionado).entrenarPokemon(pokemonesEquipo6(entrenadorSeleccionado));
-                
-                System.out.println(" \n \n \n \n \n \n"); //Espacio visual
-                System.out.println("Entrenando pokémon...");
-                System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+                if (pokeEntrenadores.get(entrenadorSeleccionado).getPokeLista().isEmpty() !=true) {
+                    pokemonDeEntrenamiento = pokeEntrenadores.get(entrenadorSeleccionado).prepararEntrenamiento();
+                    pokeEntrenadores.get(entrenadorSeleccionado).entrenarPokemon(pokemonDeEntrenamiento);
 
-                wait(sg);
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+                    System.out.println("Entrenando pokémon...");
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                System.out.println("Creando lazos más fuertes con el entrenador...");
-                System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+                    wait(sg);
 
-                wait(sg);
+                    System.out.println("Creando lazos más fuertes con el entrenador...");
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                System.out.println("Perfeccionando movimientos...");
-                System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+                    wait(sg);
 
-                wait(sg);
+                    System.out.println("Perfeccionando movimientos...");
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                System.out.println("Aumentando autoestima...");
-                System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+                    wait(sg);
 
-                wait(sg);
+                    System.out.println("Aumentando autoestima...");
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                System.out.println(" ☆ ☆ ☆ ¡Pokémon entrenado con éxito! ☆ ☆ ☆ ");
-                System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+                    wait(sg);
 
-                wait(sg);
+                    System.out.println(" ☆ ☆ ☆ ¡Pokémon entrenado con éxito! ☆ ☆ ☆ ");
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+
+                    wait(sg);
+                } else {
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+                    System.out.println("¡ Oh oh, tus pokemones están de vacaciones o no tienes !");
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+                }//cierra else-if
 
                 System.out.println("Regresando al menú anterior...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
