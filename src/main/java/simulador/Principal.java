@@ -7,7 +7,7 @@ import simulador.batalla.Batalla;
 import simulador.entrenador.Entrenador;
 
 import simulador.persistencia.ArchivosConexion;
-
+import simulador.pokemon.Estado;
 import simulador.pokemon.Pokemon;
 import simulador.pokemon.TipoPokemon;
 
@@ -272,6 +272,7 @@ public class Principal {
 
                 } else{
 
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                     System.out.println(" > > > Lista de Entrenadores < < < ");
                     System.out.println(""); //Espacio visual
 
@@ -999,7 +1000,7 @@ public class Principal {
 
     // [] [] [] [] [] [] [] [] [] SUBMENU DURANTE LA BATALLA [] [] [] [] [] [] [] [] [] //
 
-    public static void subMenuDuranteLaBatalla(){ //✅
+    public static void subMenuDuranteLaBatalla(String nombrePokemonGanador){ //✅
         while (firstSubMenuDuranteLaBatalla) {
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
             System.out.println("¡ HA INICIADO LA BATALLA !");   
@@ -1016,65 +1017,135 @@ public class Principal {
         wait(3);
 
         System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
-        System.out.println(" \n \n \n \n \n \n"); //Espacio visual TODO: Revisar altura.
+        System.out.println(" \n \n \n "); //Espacio visual
         System.out.println("(1) | "+ pokemonBatalla1.getNombre() + " -> Atacar.");
         System.out.println("(2) | "+ pokemonBatalla2.getNombre() + " -> Atacar.");
         System.out.println("(3) | Finalizar batalla.");
 
 
-        switchSubMenuDuranteLaBatalla(check());
+        switchSubMenuDuranteLaBatalla(check(), nombrePokemonGanador);
     }//cierra menuIniciarBatalla
 
     // {} {} {} {} {} {} {} {} {} SWITCH DURANTE LA BATALLA {} {} {} {} {} {} {} {} {} //
     
-    public static void switchSubMenuDuranteLaBatalla(int option){ //🅿️
+    public static void switchSubMenuDuranteLaBatalla(int option, String nombrePokemonGanador){ //🅿️
         switch (option){
             case 1: //✅
 
                 wait(sg);
 
+                if (pokemonBatalla2.getEstado().equals(Estado.NORMAL)) {
+                    
+                    System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
+                    System.out.println(" \n \n "); //Espacio visual
+                    System.out.println( pokemonBatalla1.getNombre() + " Ha atacado a " + pokemonBatalla2.getNombre());
+                    System.out.println(" \n \n \n \n "); //Espacio visual
 
-                pokemonBatalla2.recibirDaño(pokemonBatalla1.atacar(pokemonBatalla2));
+                    wait(sg);
 
-                System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
-                System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
-                System.out.println( pokemonBatalla1.getNombre() + " Ha atacado a " + pokemonBatalla2.getNombre());
-                System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
+                    System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
+                    System.out.println(" \n \n \n"); //Espacio visual
+                    System.out.println( " ¡ El ataque ha sido eficaz ! ");
+                    System.out.println(" \n \n \n \n "); //Espacio visual
+
+                    pokemonBatalla2.recibirDaño(pokemonBatalla1.atacar(pokemonBatalla2));
+                }else{
+
+                    if (pokemonBatalla1.getSalud() <= 0) {
+                        nombrePokemonGanador = pokemonBatalla2.getNombre();
+                     } else if (pokemonBatalla2.getSalud() <= 0) {
+                        nombrePokemonGanador = pokemonBatalla1.getNombre();
+                     } else {
+                        nombrePokemonGanador = "PEPPA PIG";
+                    }//ciera else-if
+
+                    System.out.println(" [ " + nombrePokemonGanador + " ] Ha ganado la batalla! ");
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+
+                    wait(sg);
+
+                    System.out.println(" [ " + nombrePokemonGanador + " ] Ha ganado la batalla! ");
+                    System.out.println(" \n \n "); //Espacio visual
+
+                    
+                    System.out.println("           > > > ¿Qué deseas hacer? < < <");
+                    System.out.println("(1) | Finalizar batalla.     (2) | Salir de PokeMondonGo.");
+                    System.out.println("");
+                    System.out.print("Escoge una opción: ");
+
+                    if (check()==1) {
+                        miniMenu(7);
+                    }else if (check()==2) {
+                        salir();
+                    }else if (check() != 1 && check() !=2) {
+                        System.out.println("Ingrese una opción válida");
+                    }
+                }//cierra else-if
 
                 wait(sg);
 
-                System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
-                System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
-                System.out.println( " ¡ El ataque ha sido eficaz ! ");
-                System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
-
-                wait(sg);
-
+                
                 break;
             case 2: //✅
 
                 wait(sg);
 
-                pokemonBatalla2.atacar(pokemonBatalla1);
+                if (pokemonBatalla1.getEstado().equals(Estado.NORMAL)) {
 
-                System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
-                System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
-                System.out.println( pokemonBatalla2.getNombre() + " Ha atacado a " + pokemonBatalla1.getNombre());
-                System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
+                    System.out.println("[ " + pokemonBatalla2.getNombre() + " ] VS [ " + pokemonBatalla1.getNombre() + " ]");
+                    System.out.println(" \n \n "); //Espacio visual
+                    System.out.println( pokemonBatalla2.getNombre() + " Ha atacado a " + pokemonBatalla1.getNombre());
+                    System.out.println(" \n \n \n \n "); //Espacio visual
 
-                wait(5);
+                    wait(sg);
 
-                System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
-                System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
-                System.out.println( " ¡ El ataque ha sido eficaz ! ");
-                System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
+                    System.out.println("[ " + pokemonBatalla2.getNombre() + " ] VS [ " + pokemonBatalla1.getNombre() + " ]");
+                    System.out.println(" \n \n \n"); //Espacio visual
+                    System.out.println( " ¡ El ataque ha sido eficaz ! ");
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+
+                    pokemonBatalla1.recibirDaño(pokemonBatalla2.atacar(pokemonBatalla1));
+
+                }else{
+
+                    if (pokemonBatalla1.getSalud() <= 0) {
+                        nombrePokemonGanador = pokemonBatalla2.getNombre();
+                    } else if (pokemonBatalla2.getSalud() <= 0) {
+                        nombrePokemonGanador = pokemonBatalla1.getNombre();
+                    } else {
+                        nombrePokemonGanador = "PEPPA PIG";
+                    }//ciera else-if
+
+                    System.out.println(" [ " + nombrePokemonGanador + " ] Ha ganado la batalla! ");
+                    System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+
+                    wait(sg);
+
+                    System.out.println(" [ " + nombrePokemonGanador + " ] Ha ganado la batalla! ");
+                    System.out.println(" \n \n "); //Espacio visual
+
+                    System.out.println("");
+                    System.out.println("           > > > ¿Qué deseas hacer? < < <");
+                    System.out.println("(1) | Finalizar batalla.     (2) | Salir de PokeMondonGo.");
+                    System.out.println("");
+                    System.out.print("Escoge una opción: ");
+
+                    if (check()==1) {
+                        miniMenu(7);
+                    }else if (check()==2) {
+                        salir();
+                    }else if (check() != 1 && check() !=2) {
+                        System.out.println("Ingrese una opción válida");
+                    }
+                }//cierra else-if
 
                 wait(sg);
-
+                
+                
                 break;
             case 3: //🅿️
-                verif = false;
-                System.out.println(nombrePokemonGanador);
+                
+                miniMenu(7);
                 break;
             default: //🅿️
                 System.out.println(" \n \n \n \n \n \n "); //Espacio visual
@@ -1357,7 +1428,7 @@ public class Principal {
             case 7: //🅿️
                 interfazDeCarga();
                 wait(sg);
-                subMenuDuranteLaBatalla();
+                subMenuDuranteLaBatalla(nombrePokemonGanador);
                 break;
             default:
                 break;
