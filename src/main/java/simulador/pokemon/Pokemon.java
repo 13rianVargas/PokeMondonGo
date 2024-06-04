@@ -26,7 +26,7 @@ public abstract class Pokemon implements Serializable{
     // Getters & Setters //
 
     public String getNombre() { //✅
-        return nombre;
+        return this.nombre;
     }//cierra getNombre
 
     public double getSalud() { //✅
@@ -72,7 +72,9 @@ public abstract class Pokemon implements Serializable{
         if (this.salud <= 0) {
             this.salud = 0;
             this.estado = Estado.DEBILITADO;
+            System.out.println(" \n \n \n \n "); //Espacio visual TODO: Revisar altura.
             System.out.println(this.nombre + " ha sido debilitado.");
+            System.out.println(" \n \n \n \n "); //Espacio visual TODO: Revisar altura.
         }//cierra if
     }//cierra recibirDaño
 

@@ -105,7 +105,7 @@ public class Entrenador { //✅
             System.out.println(" > > > Tus Pokémon Disponibles < < <");
             System.out.println("");
 
-            mostrarPokemones();
+            mostrarPokemonesIndex();
 
             System.out.println("");
             System.out.println("Digita el número de tu pokémon para luchar: ");
