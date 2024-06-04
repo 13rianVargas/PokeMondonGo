@@ -30,6 +30,7 @@ public class Principal {
 
     static Scanner sc = new Scanner(System.in);
 
+    static int sg = 3;
     static int option;
     static String busqueda;
     static int menuActual;
@@ -113,7 +114,7 @@ public class Principal {
     
     public static void menu1(){ //✅
         
-        wait(3);
+        wait(sg);
         
         System.out.println("       ,___          .-;'|    |  | » » »     MENÚ PRINCIPAL     « « « |  | |';-.          ___,\n" + //
                         "       `\"-.`\\_...._/`.`   |   |  |                                    |  |  |`.`\\_...._/`.-\"`\n" + //
@@ -157,7 +158,7 @@ public class Principal {
                 System.out.println("¡Debe seleccionar una opción válida!");
                 System.out.println(" \n \n \n \n \n \n "); //Espacio visual
 
-                wait(4);
+                wait(sg);
 
                 menu1();
 
@@ -177,7 +178,7 @@ public class Principal {
             firstMenuGestionarEntrenadores = false;
         }//cierra while
         
-        wait(5);
+        wait(sg);
     
         System.out.println("       ,___          .-;'|    |  | » » » GESTIONAR ENTRENADORES « « « |  | |';-.          ___,\n" + //
                         "       `\"-.`\\_...._/`.`   |   |  |                                    |  |  |`.`\\_...._/`.-\"`\n" + //
@@ -207,11 +208,11 @@ public class Principal {
                 System.out.println("¡Has seleccionado « Registrar nuevo entrenador » !");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
             
-                wait(5);
+                wait(sg);
 
                 interfazDeCarga();
 
-                wait(4);
+                wait(sg);
                 
                 System.out.println("¡Ingrese el nombre del nuevo entrenador!");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -227,22 +228,22 @@ public class Principal {
                 System.out.println("Creando nuevo entrenador...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println("Registrando en la Liga Pókemon...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println(" ☆ ☆ ☆ ¡Entrenador registrado con éxito! ☆ ☆ ☆ ");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println("Regresando al menú anterior...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(4);
+                wait(sg);
 
                 menuGestionarEntrenadores();
 
@@ -254,11 +255,11 @@ public class Principal {
                 System.out.println("¡Has seleccionado « Ver lista de entrenadores » !");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
             
-                wait(5);
+                wait(sg);
 
                 interfazDeCarga();
 
-                wait(4);
+                wait(sg);
 
                 if (pokeEntrenadores.isEmpty()) {
 
@@ -298,7 +299,7 @@ public class Principal {
                 System.out.println("Regresando al menú principal...");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
     
-                wait(5);
+                wait(sg);
 
                 menu1();
 
@@ -309,7 +310,7 @@ public class Principal {
                 System.out.println("Guardando estadísticas...");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
         
-                wait(5);
+                wait(sg);
 
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                 System.out.println("Guardando pokemones...");     
@@ -324,7 +325,7 @@ public class Principal {
                 System.out.println("¡Debe seleccionar una opción válida!");
                 System.out.println(" \n \n \n \n \n \n "); //Espacio visual
 
-                wait(3);
+                wait(sg);
 
                 System.out.println("Reiniciando...");
                 System.out.println(" \n \n \n \n \n \n "); //Espacio visual
@@ -349,11 +350,11 @@ public class Principal {
             firstSubMenuSeleccionarEntrenadores = false;
         }//cierra while
             
-        wait(5);
+        wait(sg);
 
         interfazDeCarga();
 
-        wait(4);
+        wait(sg);
 
         if (pokeEntrenadores.isEmpty()) {
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -379,13 +380,13 @@ public class Principal {
 
         }//cierra else-if
 
-        wait(4);
+        wait(sg);
 
         System.out.println(" \n \n \n \n \n \n"); //Espacio visual
         System.out.println("¡Has seleccionado al entrenador « " + pokeEntrenadores.get(entrenadorSeleccionado).getNombre() + " » !");     
         System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-        wait(4);
+        wait(sg);
         
         subMenuNombreEntrenador(entrenadorSeleccionado);
 
@@ -423,15 +424,15 @@ public class Principal {
                 System.out.println("¡Has seleccionado « Ver equipo de pokemones » !");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
             
-                wait(5);
+                wait(sg);
 
                 interfazDeCarga();
 
-                wait(4);
+                wait(sg);
 
                 pokeEntrenadores.get(entrenadorSeleccionado).mostrarPokemones();
 
-                wait(5);
+                wait(sg);
 
                 miniMenu(5);
 
@@ -443,11 +444,11 @@ public class Principal {
                 System.out.println("¡Has seleccionado « Agregar pokémon al equipo » !");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
             
-                wait(5);
+                wait(sg);
 
                 interfazDeCarga();
 
-                wait(4);
+                wait(sg);
 
                 pokeEntrenadores.get(entrenadorSeleccionado).agregarPokemon(pokemonesEquipo6(pokemonSeleccionado));
                 
@@ -455,17 +456,17 @@ public class Principal {
                 System.out.println("Agregando pokémon...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println(" ☆ ☆ ☆ ¡Pokémon agregado al equipo con éxito! ☆ ☆ ☆ ");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println("Regresando al menú anterior...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(4);
+                wait(sg);
 
                 subMenuNombreEntrenador(entrenadorSeleccionado);
 
@@ -476,11 +477,11 @@ public class Principal {
                 System.out.println("¡Has seleccionado « Entrenar pokémon » !");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
             
-                wait(5);
+                wait(sg);
 
                 interfazDeCarga();
 
-                wait(4);
+                wait(sg);
 
                 pokeEntrenadores.get(entrenadorSeleccionado).entrenarPokemon(pokemonesEquipo6(entrenadorSeleccionado));
                 
@@ -488,32 +489,32 @@ public class Principal {
                 System.out.println("Entrenando pokémon...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println("Creando lazos más fuertes con el entrenador...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println("Perfeccionando movimientos...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println("Aumentando autoestima...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println(" ☆ ☆ ☆ ¡Pokémon entrenado con éxito! ☆ ☆ ☆ ");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println("Regresando al menú anterior...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(4);
+                wait(sg);
 
                 subMenuNombreEntrenador(entrenadorSeleccionado); 
 
@@ -523,7 +524,7 @@ public class Principal {
                 System.out.println("Regresando al menú anterior...");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
     
-                wait(5);
+                wait(sg);
 
                 menuGestionarEntrenadores();
 
@@ -534,7 +535,7 @@ public class Principal {
                 System.out.println("Guardando estadísticas...");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
         
-                wait(5);
+                wait(sg);
 
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                 System.out.println("Guardando pokemones...");     
@@ -547,7 +548,7 @@ public class Principal {
                 System.out.println("¡Debe seleccionar una opción válida!");
                 System.out.println(" \n \n \n \n \n \n "); //Espacio visual
 
-                wait(2);
+                wait(sg);
 
                 System.out.println("Reiniciando...");
                 System.out.println(" \n \n \n \n \n \n "); //Espacio visual
@@ -655,7 +656,7 @@ public class Principal {
             firstMenuGestionarPokemones = false;
         }//cierra while
         
-        wait(5);
+        wait(sg);
 
         System.out.println("       ,___          .-;'|    | » » »  GESTIONAR  POKEMONES  « « « | |';-.          ___,\n" + //
                         "       `\"-.`\\_...._/`.`   |   |                                    |  |`.`\\_...._/`.-\"`\n" + //
@@ -684,7 +685,7 @@ public class Principal {
                 System.out.println("¡Has seleccionado « Ver pokemones registrados » !");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(3);
+                wait(sg);
 
                 for (int i = 0; i < pokemonesDisponibles.size(); i++) {
 
@@ -703,11 +704,11 @@ public class Principal {
                 System.out.println("¡Has seleccionado « Registrar nuevo pokémon » !");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
             
-                wait(5);
+                wait(sg);
 
                 interfazDeCarga();
 
-                wait(4);
+                wait(sg);
 
                 for (int i = 0; i < pokemonesDisponibles.size(); i++) {
 
@@ -728,22 +729,22 @@ public class Principal {
                 System.out.println("Creando tu pokémon...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println("Verificando en la Pokédex...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println(" ☆ ☆ ☆ ¡Pokémon registrado con éxito! ☆ ☆ ☆ ");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 System.out.println("Regresando al menú anterior...");
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(4);
+                wait(sg);
 
                 menuGestionarPokemones();
 
@@ -754,7 +755,7 @@ public class Principal {
                 System.out.println("Regresando al menú principal...");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(5);
+                wait(sg);
 
                 menu1();
 
@@ -765,7 +766,7 @@ public class Principal {
                 System.out.println("Guardando estadísticas...");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
         
-                wait(5);
+                wait(sg);
 
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                 System.out.println("Guardando pokemones...");     
@@ -780,7 +781,7 @@ public class Principal {
                 System.out.println("¡ Debes seleccionar una opción válida !");
                 System.out.println(" \n \n \n \n \n \n "); //Espacio visual
 
-                wait(4);
+                wait(sg);
 
                 menuGestionarPokemones();
 
@@ -798,7 +799,7 @@ public class Principal {
             firstMenuIniciarBatalla = false;
         }//cierra while
         
-        wait(5);
+        wait(sg);
 
         System.out.println("       ,___          .-;'|    |  | » » »    INICIAR  BATALLA    « « « |  | |';-.          ___,\n" + //
                         "       `\"-.`\\_...._/`.`   |   |  |                                    |  |  |`.`\\_...._/`.-\"`\n" + //
@@ -824,18 +825,18 @@ public class Principal {
         switch (option){
             case 1: //✅
 
-                wait(5);
+                wait(sg);
 
                 interfazDeCarga();
         
-                wait(4);
+                wait(sg);
 
                 if (pokeEntrenadores.isEmpty()) {
                     System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                     System.out.println("¡ No hay entrenadores registrados !");
                     System.out.println(" \n \n \n "); //Espacio visual
         
-                    miniMenu(3);
+                    miniMenu(sg);
                 } else{
         
                     System.out.println(" > > > Lista de Entrenadores < < < ");
@@ -854,30 +855,30 @@ public class Principal {
         
                 }//cierra else-if
         
-                wait(4);
+                wait(sg);
         
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                 System.out.println("¡Has seleccionado al entrenador « " + pokeEntrenadores.get(entrenadorBatalla1).getNombre() + " » !");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
         
-                wait(4);
+                wait(sg);
 
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                 System.out.println("Regresando al menú anterior...");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
         
-                wait(4);
+                wait(sg);
 
                 menuIniciarBatalla();
 
                 break;
             case 2: //✅
 
-                wait(5);
+                wait(sg);
 
                 interfazDeCarga();
         
-                wait(4);
+                wait(sg);
 
                 if (pokeEntrenadores.isEmpty()) {
                     System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -903,19 +904,19 @@ public class Principal {
         
                 }//cierra else-if
         
-                wait(4);
+                wait(sg);
         
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                 System.out.println("¡Has seleccionado al entrenador « " + pokeEntrenadores.get(entrenadorBatalla2).getNombre() + " » !");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
         
-                wait(4);
+                wait(sg);
 
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                 System.out.println("Regresando al menú anterior...");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
         
-                wait(4);
+                wait(sg);
 
                 menuIniciarBatalla();
                 break;
@@ -956,7 +957,7 @@ public class Principal {
                 System.out.println("Regresando al menú principal...");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-                wait(4);
+                wait(sg);
 
                 menu1();
 
@@ -967,7 +968,7 @@ public class Principal {
                 System.out.println("Guardando estadísticas...");     
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
         
-                wait(5);
+                wait(sg);
 
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                 System.out.println("Guardando pokemones...");     
@@ -981,7 +982,7 @@ public class Principal {
                 System.out.println("¡ Debes seleccionar una opción válida s!");
                 System.out.println(" \n \n \n \n \n \n "); //Espacio visual
 
-                wait(4);
+                wait(sg);
 
                 menuIniciarBatalla();
                 
@@ -1023,7 +1024,7 @@ public class Principal {
         switch (option){
             case 1: //✅
 
-                wait(3);
+                wait(sg);
 
 
                 pokemonBatalla2.recibirDaño(pokemonBatalla1.atacar(pokemonBatalla2));
@@ -1033,19 +1034,19 @@ public class Principal {
                 System.out.println( pokemonBatalla1.getNombre() + " Ha atacado a " + pokemonBatalla2.getNombre());
                 System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
 
-                wait(5);
+                wait(sg);
 
                 System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
                 System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
                 System.out.println( " ¡ El ataque ha sido eficaz ! ");
                 System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
 
-                wait(5);
+                wait(sg);
 
                 break;
             case 2: //✅
 
-                wait(3);
+                wait(sg);
 
                 pokemonBatalla2.atacar(pokemonBatalla1);
 
@@ -1061,7 +1062,7 @@ public class Principal {
                 System.out.println( " ¡ El ataque ha sido eficaz ! ");
                 System.out.println(" \n \n \n"); //Espacio visual TODO: Revisar altura.
 
-                wait(5);
+                wait(sg);
 
                 break;
             case 3: //🅿️
@@ -1073,7 +1074,7 @@ public class Principal {
                 System.out.println("¡ Debes seleccionar una opción válida s!");
                 System.out.println(" \n \n \n \n \n \n "); //Espacio visual
 
-                wait(4);
+                wait(sg);
 
                 menuIniciarBatalla();
                 
@@ -1090,7 +1091,7 @@ public class Principal {
 
         guardarPartida(pokemonesDisponibles, "ListaDePokemones.pokemondongo");
         
-        wait(5);
+        wait(sg);
 
         System.out.print("🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨\n" + //
                         "🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨\n" + //
@@ -1145,12 +1146,12 @@ public class Principal {
 
     public static void interfazPokeMondonGo(){ //✅
 
-        wait(6);
+        wait(sg*2);
         
         System.out.println("» » » Bienvenido(a) a PokeMondonGo « « «");
         System.out.println(" \n \n \n \n \n \n"); //Espacio visual
 
-        wait(6);
+        wait(sg*2);
 
         System.out.println(" \n \n \n \n "); //Espacio visual //P
         System.out.println("   ___      \n" + //
@@ -1317,37 +1318,37 @@ public class Principal {
         switch (menuOpt) {
             case 1: //✅
                 interfazDeCarga();
-                wait(4);
+                wait(sg);
                 menu1();
                 break;
             case 2: //🅿️
                 interfazDeCarga();
-                wait(4);
+                wait(sg);
                 menuGestionarEntrenadores();
                 break;
             case 3: //🅿️
                 interfazDeCarga();
-                wait(4);
+                wait(sg);
                 subMenuSeleccionarEntrenadores();
                 break;
             case 4: //✅
                 interfazDeCarga();
-                wait(4);
+                wait(sg);
                 subMenuNombreEntrenador(entrenadorSeleccionado);
                 break;
             case 5: //🅿️
                 interfazDeCarga();
-                wait(4);
+                wait(sg);
                 menuGestionarPokemones();
                 break;
             case 6: //✅
                 interfazDeCarga();
-                wait(4);
+                wait(sg);
                 menuIniciarBatalla();
                 break;
             case 7: //🅿️
                 interfazDeCarga();
-                wait(4);
+                wait(sg);
                 subMenuDuranteLaBatalla();
                 break;
             default:
