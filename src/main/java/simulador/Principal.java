@@ -30,7 +30,7 @@ public class Principal {
 
     static Scanner sc = new Scanner(System.in);
 
-    static int sg = 3;
+    static int sg = 1;
     static int option;
     static String busqueda;
     static int menuActual;
@@ -116,19 +116,19 @@ public class Principal {
         
         wait(sg);
         
-        System.out.println("       ,___          .-;'|    |  | » » »     MENÚ PRINCIPAL     « « « |  | |';-.          ___,\n" + //
-                        "       `\"-.`\\_...._/`.`   |   |  |                                    |  |  |`.`\\_...._/`.-\"`\n" + //
-                        "    ,      \\        /      |  |  |                                    |  |   | \\        /      ,\n" + //
-                        " .-' ',    / ()   ()\\      |  |  |  (1) | Gestionar entrenadores.     |  |   | /()   () \\    .' `-.\n" + //
-                        "`'._   \\  /()   .   (|     |  |  |                                    |  |   ||)   .   ()\\  /   _.'`\n" + //
-                        "    > .' ;,    -'-  /       | |  |  (2) | Gestionar pokemones.        |  |    |\\  -'-    ,; '. <\n" + //
-                        "   / <   |;,     __.;       | |  |                                    |  |    |;.__     ,;|   > \\\n" + //
-                        "   '-.'-.|  , \\    , \\    |   |  |  (3) | Iniciar batalla.            |  |  | / ,    / ,  |.-'.-'\n" + //
-                        "      `>.|;, \\_)    \\_)   |   |  |                                    |  |  |(_/    (_/ ,;|.<'\n" + //
-                        "       `-;     ,    /       | |  |  (4) | Salir.                      |  |    | \\    ,     ;-'\n" + //
-                        "          \\    /   <       |  |  |                                    |  |   |   >   \\    /\n" + //
-                        "           '. <`'-._)       | |  |                                    |  |    | (_,-'`> .'\n" + //
-                        "            '._)            | |  | » » »      PokeMondonGo      « « « |  |    |     (_,'");
+        System.out.println("       ,___          .-;'   |  | » » »     MENÚ PRINCIPAL     « « « |  |   ';-.          ___,\n" + //
+                        "       `\"-.`\\_...._/`.`     |  |                                    |  |    `.`\\_...._/`.-\"`\n" + //
+                        "    ,      \\        /       |  |                                    |  |      \\        /      ,\n" + //
+                        " .-' ',    / ()   ()\\       |  |  (1) | Gestionar entrenadores.     |  |      /()   () \\    .' `-.\n" + //
+                        "`'._   \\  /()   .   (|      |  |                                    |  |     |)   .   ()\\  /   _.'`\n" + //
+                        "    > .' ;,    -'-  /       |  |  (2) | Gestionar pokemones.        |  |      \\  -'-    ,; '. <\n" + //
+                        "   / <   |;,     __.;       |  |                                    |  |      ;.__     ,;|   > \\\n" + //
+                        "   '-.'-.|  , \\    , \\      |  |  (3) | Iniciar batalla.            |  |     / ,    / ,  |.-'.-'\n" + //
+                        "      `>.|;, \\_)    \\_)     |  |                                    |  |    (_/    (_/ ,;|.<'\n" + //
+                        "       `-;     ,    /       |  |  (4) | Salir.                      |  |       \\    ,     ;-'\n" + //
+                        "          \\    /   <        |  |                                    |  |        >   \\    /\n" + //
+                        "           '. <`'-._)       |  |                                    |  |       (_,-'`> .'\n" + //
+                        "            '._)            |  | » » »      PokeMondonGo      « « « |  |           (_,'");
 
         switchMenu1(check());
     }//cierra menu1
@@ -180,19 +180,19 @@ public class Principal {
         
         wait(sg);
     
-        System.out.println("       ,___          .-;'|    |  | » » » GESTIONAR ENTRENADORES « « « |  | |';-.          ___,\n" + //
-                        "       `\"-.`\\_...._/`.`   |   |  |                                    |  |  |`.`\\_...._/`.-\"`\n" + //
-                        "    ,      \\        /      |  |  |  (1) | Registrar nuevo entrenador. |  |   | \\        /      ,\n" + //
-                        " .-' ',    / ()   ()\\      |  |  |                                    |  |   | /()   () \\    .' `-.\n" + //
-                        "`'._   \\  /()   .   (|     |  |  |  (2) | Ver lista de entrenadores.  |  |   ||)   .   ()\\  /   _.'`\n" + //
-                        "    > .' ;,    -'-  /       | |  |                                    |  |    |\\  -'-    ,; '. <\n" + //
-                        "   / <   |;,     __.;       | |  |  (3) | Seleccionar un entrenador.  |  |    |;.__     ,;|   > \\\n" + //
-                        "   '-.'-.|  , \\    , \\    |   |  |                                    |  |  | / ,    / ,  |.-'.-'\n" + //
-                        "      `>.|;, \\_)    \\_)   |   |  |  (4) | Volver al menú principal.   |  |  |(_/    (_/ ,;|.<'\n" + //
-                        "       `-;     ,    /       | |  |                                    |  |    | \\    ,     ;-'\n" + //
-                        "          \\    /   <       |  |  |  (5) | Salir.                      |  |   |   >   \\    /\n" + //
-                        "           '. <`'-._)       | |  |                                    |  |    | (_,-'`> .'\n" + //
-                        "            '._)            | |  | » » »      PokeMondonGo      « « « |  |    |     (_,'");
+        System.out.println("       ,___          .-;'   |  | » » » GESTIONAR ENTRENADORES « « « |  |   ';-.          ___,\n" + //
+                        "       `\"-.`\\_...._/`.`     |  |                                    |  |    `.`\\_...._/`.-\"`\n" + //
+                        "    ,      \\        /       |  |  (1) | Registrar nuevo entrenador. |  |      \\        /      ,\n" + //
+                        " .-' ',    / ()   ()\\       |  |                                    |  |      /()   () \\    .' `-.\n" + //
+                        "`'._   \\  /()   .   (|      |  |  (2) | Ver lista de entrenadores.  |  |     |)   .   ()\\  /   _.'`\n" + //
+                        "    > .' ;,    -'-  /       |  |                                    |  |      \\  -'-    ,; '. <\n" + //
+                        "   / <   |;,     __.;       |  |  (3) | Seleccionar un entrenador.  |  |      ;.__     ,;|   > \\\n" + //
+                        "   '-.'-.|  , \\    , \\      |  |                                    |  |     / ,    / ,  |.-'.-'\n" + //
+                        "      `>.|;, \\_)    \\_)     |  |  (4) | Volver al menú principal.   |  |    (_/    (_/ ,;|.<'\n" + //
+                        "       `-;     ,    /       |  |                                    |  |       \\    ,     ;-'\n" + //
+                        "          \\    /   <        |  |  (5) | Salir.                      |  |        >   \\    /\n" + //
+                        "           '. <`'-._)       |  |                                    |  |       (_,-'`> .'\n" + //
+                        "            '._)            |  | » » »      PokeMondonGo      « « « |  |           (_,'");
         
         switchMenuGestionarEntrenadores(check());
     }//cierra menuGestionarEntrenadores
@@ -396,19 +396,19 @@ public class Principal {
 
     public static void subMenuNombreEntrenador(int entrenadorSeleccionado){ //✅
 
-        System.out.println("       ,___          .-;'|    |  | » » » OPCIONES DE ENTRENADOR « « « |  | |';-.          ___,\n" + //
-                        "       `\"-.`\\_...._/`.`   |   |  |                                    |  |  |`.`\\_...._/`.-\"`\n" + //
-                        "    ,      \\        /      |  |  |  (1) | Ver equipo de pokemones.    |  |   | \\        /      ,\n" + //
-                        " .-' ',    / ()   ()\\      |  |  |                                    |  |   | /()   () \\    .' `-.\n" + //
-                        "`'._   \\  /()   .   (|     |  |  |  (2) | Agregar pokémon al equipo.  |  |   ||)   .   ()\\  /   _.'`\n" + //
-                        "    > .' ;,    -'-  /       | |  |                                    |  |    |\\  -'-    ,; '. <\n" + //
-                        "   / <   |;,     __.;       | |  |  (3) | Entrenar pokémon.           |  |    |;.__     ,;|   > \\\n" + //
-                        "   '-.'-.|  , \\    , \\    |   |  |                                    |  |  | / ,    / ,  |.-'.-'\n" + //
-                        "      `>.|;, \\_)    \\_)   |   |  |  (4) | Volver al menu anterior.    |  |  |(_/    (_/ ,;|.<'\n" + //
-                        "       `-;     ,    /       | |  |                                    |  |    | \\    ,     ;-'\n" + //
-                        "          \\    /   <       |  |  |  (5) | Salir.                      |  |   |   >   \\    /\n" + //
-                        "           '. <`'-._)       | |  |                                    |  |    | (_,-'`> .'\n" + //
-                        "            '._)            | |  | » » »      PokeMondonGo      « « « |  |    |     (_,'");
+        System.out.println("       ,___          .-;'   |  | » » » OPCIONES DE ENTRENADOR « « « |  |   ';-.          ___,\n" + //
+                        "       `\"-.`\\_...._/`.`     |  |                                    |  |    `.`\\_...._/`.-\"`\n" + //
+                        "    ,      \\        /       |  |  (1) | Ver equipo de pokemones.    |  |      \\        /      ,\n" + //
+                        " .-' ',    / ()   ()\\       |  |                                    |  |      /()   () \\    .' `-.\n" + //
+                        "`'._   \\  /()   .   (|      |  |  (2) | Agregar pokémon al equipo.  |  |     |)   .   ()\\  /   _.'`\n" + //
+                        "    > .' ;,    -'-  /       |  |                                    |  |      \\  -'-    ,; '. <\n" + //
+                        "   / <   |;,     __.;       |  |  (3) | Entrenar pokémon.           |  |      ;.__     ,;|   > \\\n" + //
+                        "   '-.'-.|  , \\    , \\      |  |                                    |  |     / ,    / ,  |.-'.-'\n" + //
+                        "      `>.|;, \\_)    \\_)     |  |  (4) | Volver al menu anterior.    |  |    (_/    (_/ ,;|.<'\n" + //
+                        "       `-;     ,    /       |  |                                    |  |       \\    ,     ;-'\n" + //
+                        "          \\    /   <        |  |  (5) | Salir.                      |  |        >   \\    /\n" + //
+                        "           '. <`'-._)       |  |                                    |  |       (_,-'`> .'\n" + //
+                        "            '._)            |  | » » »      PokeMondonGo      « « « |  |           (_,'");
         
     
         switchNombreEntrenador(check(), entrenadorSeleccionado);
@@ -658,19 +658,19 @@ public class Principal {
         
         wait(sg);
 
-        System.out.println("       ,___          .-;'|    | » » »  GESTIONAR  POKEMONES  « « « | |';-.          ___,\n" + //
-                        "       `\"-.`\\_...._/`.`   |   |                                    |  |`.`\\_...._/`.-\"`\n" + //
-                        "    ,      \\        /      |  |                                    |   | \\        /      ,\n" + //
-                        " .-' ',    / ()   ()\\      |  | (1) | Ver pokemones registrados.   |   | /()   () \\    .' `-.\n" + //
-                        "`'._   \\  /()   .   (|     |  |                                    |   ||)   .   ()\\  /   _.'`\n" + //
-                        "    > .' ;,    -'-  /       | | (2) | Registrar nuevo pokémon.     |    |\\  -'-    ,; '. <\n" + //
-                        "   / <   |;,     __.;       | |                                    |    |;.__     ,;|   > \\\n" + //
-                        "   '-.'-.|  , \\    , \\    |   | (3) | Volver al menú principal.    |  | / ,    / ,  |.-'.-'\n" + //
-                        "      `>.|;, \\_)    \\_)   |   |                                    |  |(_/    (_/ ,;|.<'\n" + //
-                        "       `-;     ,    /       | | (4) | Salir.                       |    | \\    ,     ;-'\n" + //
-                        "          \\    /   <       |  |                                    |   |   >   \\    /\n" + //
-                        "           '. <`'-._)       | |                                    |    | (_,-'`> .'\n" + //
-                        "            '._)            | | » » »      PokeMondonGo      « « « |    |     (_,'");
+        System.out.println("       ,___          .-;'   | » » »  GESTIONAR  POKEMONES  « « « |   ';-.          ___,\n" + //
+                        "       `\"-.`\\_...._/`.`     |                                    |    `.`\\_...._/`.-\"`\n" + //
+                        "    ,      \\        /       |                                    |      \\        /      ,\n" + //
+                        " .-' ',    / ()   ()\\       | (1) | Ver pokemones registrados.   |      /()   () \\    .' `-.\n" + //
+                        "`'._   \\  /()   .   (|      |                                    |     |)   .   ()\\  /   _.'`\n" + //
+                        "    > .' ;,    -'-  /       | (2) | Registrar nuevo pokémon.     |      \\  -'-    ,; '. <\n" + //
+                        "   / <   |;,     __.;       |                                    |      ;.__     ,;|   > \\\n" + //
+                        "   '-.'-.|  , \\    , \\      | (3) | Volver al menú principal.    |     / ,    / ,  |.-'.-'\n" + //
+                        "      `>.|;, \\_)    \\_)     |                                    |    (_/    (_/ ,;|.<'\n" + //
+                        "       `-;     ,    /       | (4) | Salir.                       |       \\    ,     ;-'\n" + //
+                        "          \\    /   <        |                                    |        >   \\    /\n" + //
+                        "           '. <`'-._)       |                                    |       (_,-'`> .'\n" + //
+                        "            '._)            | » » »      PokeMondonGo      « « « |           (_,'");
         
         switchMenuGestionarPokemones(check());
     }//cierra menuGestionarPokemones
@@ -800,20 +800,20 @@ public class Principal {
         }//cierra while
         
         wait(sg);
-
-        System.out.println("       ,___          .-;'|    |  | » » »    INICIAR  BATALLA    « « « |  | |';-.          ___,\n" + //
-                        "       `\"-.`\\_...._/`.`   |   |  |                                    |  |  |`.`\\_...._/`.-\"`\n" + //
-                        "    ,      \\        /      |  |  |  (1) | Elegir entrenador #1.       |  |   | \\        /      ,\n" + //
-                        " .-' ',    / ()   ()\\      |  |  |  (2) | Elegir entrenador #2.       |  |   | /()   () \\    .' `-.\n" + //
-                        "`'._   \\  /()   .   (|     |  |  |  (3) | Seleccionar pokémon         |  |   ||)   .   ()\\  /   _.'`\n" + //
-                        "    > .' ;,    -'-  /       | |  |           del entrenador#1.        |  |    |\\  -'-    ,; '. <\n" + //
-                        "   / <   |;,     __.;       | |  |  (4) | Seleccionar pokémon         |  |    |;.__     ,;|   > \\\n" + //
-                        "   '-.'-.|  , \\    , \\    |   |  |           del entrenador#2.        |  |  | / ,    / ,  |.-'.-'\n" + //
-                        "      `>.|;, \\_)    \\_)   |   |  |  (5) | Comenzar batalla.           |  |  |(_/    (_/ ,;|.<'\n" + //
-                        "       `-;     ,    /       | |  |  (6) | Volver al menú principal.   |  |    | \\    ,     ;-'\n" + //
-                        "          \\    /   <       |  |  |  (7) | Salir.                      |  |   |   >   \\    /\n" + //
-                        "           '. <`'-._)       | |  |                                    |  |    | (_,-'`> .'\n" + //
-                        "            '._)            | |  | » » »      PokeMondonGo      « « « |  |    |     (_,'");
+        
+        System.out.println("       ,___          .-;'   |  | » » »    INICIAR  BATALLA    « « « |  |   ';-.          ___,\n" + //
+                        "       `\"-.`\\_...._/`.`     |  |                                    |  |    `.`\\_...._/`.-\"`\n" + //
+                        "    ,      \\        /       |  |  (1) | Elegir entrenador #1.       |  |      \\        /      ,\n" + //
+                        " .-' ',    / ()   ()\\       |  |  (2) | Elegir entrenador #2.       |  |      /()   () \\    .' `-.\n" + //
+                        "`'._   \\  /()   .   (|      |  |  (3) | Seleccionar pokémon         |  |     |)   .   ()\\  /   _.'`\n" + //
+                        "    > .' ;,    -'-  /       |  |           del entrenador#1.        |  |      \\  -'-    ,; '. <\n" + //
+                        "   / <   |;,     __.;       |  |  (4) | Seleccionar pokémon         |  |      ;.__     ,;|   > \\\n" + //
+                        "   '-.'-.|  , \\    , \\      |  |           del entrenador#2.        |  |     / ,    / ,  |.-'.-'\n" + //
+                        "      `>.|;, \\_)    \\_)     |  |  (5) | Comenzar batalla.           |  |    (_/    (_/ ,;|.<'\n" + //
+                        "       `-;     ,    /       |  |  (6) | Volver al menú principal.   |  |       \\    ,     ;-'\n" + //
+                        "          \\    /   <        |  |  (7) | Salir.                      |  |        >   \\    /\n" + //
+                        "           '. <`'-._)       |  |                                    |  |       (_,-'`> .'\n" + //
+                        "            '._)            |  | » » »      PokeMondonGo      « « « |  |           (_,'");
         
         sc.nextLine(); //Limpia Scanner
         switchIniciarBatalla(check());
@@ -821,7 +821,7 @@ public class Principal {
 
     // {} {} {} {} {} {} {} {} {} SWITCH INICIAR BATALLA {} {} {} {} {} {} {} {} {} //
     
-    public static void switchIniciarBatalla(int option){ //🅿️
+    public static void switchIniciarBatalla(int option){ //✅
         switch (option){
             case 1: //✅
 
@@ -836,7 +836,7 @@ public class Principal {
                     System.out.println("¡ No hay entrenadores registrados !");
                     System.out.println(" \n \n \n "); //Espacio visual
         
-                    miniMenu(sg);
+                    miniMenu(7);
                 } else{
         
                     System.out.println(" > > > Lista de Entrenadores < < < ");
@@ -932,7 +932,7 @@ public class Principal {
                 menuIniciarBatalla();
 
                 break;
-            case 5: //🅿️
+            case 5: //✅
                 
                 if (pokeEntrenadores.get(entrenadorBatalla1).equals(null) || pokeEntrenadores.get(entrenadorBatalla2).equals(null)) {
                     System.out.println("> > > Te falta seleccionar un entrenador.");
@@ -945,7 +945,6 @@ public class Principal {
                     miniMenu(7);
                     break;
                 } else {
-
                     Batalla.iniciarBatalla(pokemonBatalla1, pokemonBatalla2, verif, nombrePokemonGanador);
                 }
 
@@ -1293,9 +1292,10 @@ public class Principal {
     // () () () () () () () () () MINI MENU () () () () () () () () () //
 
     public static void miniMenu(int actual){ //✅
-        System.out.println(" > > > ¿Qué deseas hacer? < < <");
-        System.out.println("(1) | Regresa al menú anterior.");
-        System.out.println("(2) | Salir de PokeMondonGo.");
+        System.out.println("");
+        System.out.println("                  > > > ¿Qué deseas hacer? < < <");
+        System.out.println("(1) | Regresa al menú anterior.     (2) | Salir de PokeMondonGo.");
+        System.out.println("");
         System.out.print("Escoge una opción: ");
 
         int menuOpt = check();
