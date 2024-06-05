@@ -23,7 +23,6 @@ public class Entrenador implements Serializable{ //✅
     }//cierra constructor
 
 
-
     //Getters y Setters//
 
     public String getNombre(){ //✅

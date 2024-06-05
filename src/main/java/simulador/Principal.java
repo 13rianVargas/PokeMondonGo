@@ -30,7 +30,7 @@ public class Principal {
 
     static Scanner sc = new Scanner(System.in);
 
-    static int sg = 1;
+    static int sg = 4;
     static int option;
     static String busqueda;
     static int menuActual;
@@ -91,6 +91,7 @@ public class Principal {
 
         // Leer datos guardados //
         pokemonesDisponibles = (LinkedList<Pokemon>)ArchivosConexion.leer(Archivo_Pokemones);
+        
         pokeEntrenadores = (LinkedList<Entrenador>)ArchivosConexion.leer(Archivo_Entrenadores); //TODO
 
         interfazDeCarga(); //✅
