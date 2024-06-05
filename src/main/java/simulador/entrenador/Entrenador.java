@@ -39,11 +39,13 @@ public class Entrenador { //✅
 
 
     //Metodos//
-    
+
+    //Complejidad temporal: O(1) Tiempo constante
     public void agregarPokemon(Pokemon pokemon){ //✅
         pokeLista.add(pokemon);
     }//cierra agregarPokemon
 
+    //Complejidad temporal: O(1) Tiempo constante
     public void entrenarPokemon(Pokemon pokemon){ //✅
 
         if (pokeLista.isEmpty()) {
@@ -59,6 +61,7 @@ public class Entrenador { //✅
         
     }//cierra entrenarPokemon
 
+    //Complejidad temporal: O(1) Tiempo constante
     public void mostrarPokemones(){ //✅
         if (pokeLista.isEmpty()) {
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -79,6 +82,7 @@ public class Entrenador { //✅
         
     }//cierra mostrarPokemon
 
+    //Complejidad temporal: O(N) Tiempo lineal
     public void mostrarPokemonesIndex(){ //✅
         if (pokeLista.isEmpty()) {
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -98,6 +102,7 @@ public class Entrenador { //✅
         
     }//cierra mostrarPokemon
 
+    //Complejidad temporal: O(1) Tiempo constante
     public Pokemon prepararBatalla(){ //✅
         if (pokeLista.isEmpty() != true) {
 
@@ -120,6 +125,7 @@ public class Entrenador { //✅
         return null;
     }//cierra prepararBatalla
 
+    //Complejidad temporal: O(1) Tiempo constante
     public Pokemon prepararEntrenamiento(){ //✅
         if (pokeLista.isEmpty() != true) {
 
