@@ -2,12 +2,14 @@ package simulador.entrenador;
 
 import java.util.*;
 
+import java.io.Serializable;
+
 import simulador.Principal;
 import simulador.pokemon.Pokemon;
 import simulador.pokemon.TipoPokemon;
 
 
-public class Entrenador { //✅
+public class Entrenador implements Serializable{ //✅
     private String nombre;
     private LinkedList <Pokemon> pokeLista;
     
