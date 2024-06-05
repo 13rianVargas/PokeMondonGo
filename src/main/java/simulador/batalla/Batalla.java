@@ -5,6 +5,7 @@ import simulador.pokemon.Pokemon;
 
 public class Batalla {
    
+   //Complejidad temporal: O(N) Tiempo lineal
    public static String iniciarBatalla(Pokemon pokemon1, Pokemon pokemon2, boolean verif, String nombrePokemonGanador){
 
       nombrePokemonGanador = "PEPE";
