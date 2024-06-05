@@ -12,7 +12,7 @@ public class Entrenador { //✅
     private LinkedList <Pokemon> pokeLista;
     
 
-
+    
     // Constructor //
 
     public Entrenador(String nombre, LinkedList<Pokemon> pokeLista) { //✅
@@ -39,13 +39,14 @@ public class Entrenador { //✅
 
 
     //Metodos//
-    
+
+    //Complejidad temporal: O(1) Tiempo constante
     public void agregarPokemon(Pokemon pokemon){ //✅
         pokeLista.add(pokemon);
     }//cierra agregarPokemon
 
+    //Complejidad temporal: O(1) Tiempo constante
     public void entrenarPokemon(Pokemon pokemon){ //✅
-
         if (pokeLista.isEmpty()) {
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
             System.out.println("¡ Oh oh, tus pokemones están de vacaciones o no tienes !");
@@ -56,9 +57,9 @@ public class Entrenador { //✅
             System.out.println("El pokémon no se encuentra en tu inventario.");
             //TODO: añadir regreso.
         }//cierra if-else
-        
     }//cierra entrenarPokemon
 
+    //Complejidad temporal: O(1) Tiempo constante
     public void mostrarPokemones(){ //✅
         if (pokeLista.isEmpty()) {
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -79,6 +80,7 @@ public class Entrenador { //✅
         
     }//cierra mostrarPokemon
 
+    //Complejidad temporal: O(1) Tiempo constante
     public void mostrarPokemonesIndex(){ //✅
         if (pokeLista.isEmpty()) {
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -98,6 +100,7 @@ public class Entrenador { //✅
         
     }//cierra mostrarPokemon
 
+    //Complejidad temporal: O(1) Tiempo constante
     public Pokemon prepararBatalla(){ //✅
         if (pokeLista.isEmpty() != true) {
 
@@ -120,6 +123,7 @@ public class Entrenador { //✅
         return null;
     }//cierra prepararBatalla
 
+    //Complejidad temporal: O(1) Tiempo constante
     public Pokemon prepararEntrenamiento(){ //✅
         if (pokeLista.isEmpty() != true) {
 
