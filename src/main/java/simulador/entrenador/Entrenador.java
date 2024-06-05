@@ -26,7 +26,7 @@ public class Entrenador implements Serializable{ //✅
     //Getters y Setters//
 
     public String getNombre(){ //✅
-        return this.nombre;
+        return nombre;
     }//cierra getNombre
 
     public void setNombre (String nombre){ //✅

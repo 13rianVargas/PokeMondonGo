@@ -95,7 +95,7 @@ public class Principal {
         pokeEntrenadores = (LinkedList<Entrenador>)ArchivosConexion.leer(Archivo_Entrenadores); //TODO
 
         interfazDeCarga(); //✅
-        //interfazPokeMondonGo(); //✅
+        interfazPokeMondonGo(); //✅
         menu1(); //✅
 
         sc.close(); //cierra Scanner
@@ -1282,7 +1282,7 @@ public class Principal {
     // () () () () () () () () () TIEMPO DE ESPERA () () () () () () () () () //
 
     public static void wait(int sec){ //✅
-        try { //TODO: Preguntarle al profe si se puede quitar.
+        try {
             Thread.sleep(sec * 300);
          } catch (Exception e) {
             System.out.println(e);
