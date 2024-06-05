@@ -109,7 +109,8 @@ public class Principal {
 
 
     // [] [] [] [] [] [] [] [] [] [] [] [] MENU 1 [] [] [] [] [] [] [] [] [] [] [] [] //
-    
+
+    //Complejidad temporal: O(1) Tiempo constante
     public static void menu1(){ //✅
         
         wait(sg);
@@ -132,7 +133,8 @@ public class Principal {
     }//cierra menu1
    
     // {} {} {} {} {} {} {} {} {} {} {} {} SWITCH MENU 1 {} {} {} {} {} {} {} {} {} {} {} {} //
-    
+
+    //Complejidad temporal: O(1) Tiempo constante
     public static void switchMenu1(int option){ //✅
 
         switch (option){
@@ -167,6 +169,7 @@ public class Principal {
 
      // [] [] [] [] [] [] [] [] [] MENU GESTIONAR ENTRENADORES [] [] [] [] [] [] [] [] [] //
 
+    //Complejidad temporal: O(N) Tiempo lineal
     public static void menuGestionarEntrenadores(){ //✅
 
         while (firstMenuGestionarEntrenadores == true){
@@ -197,6 +200,7 @@ public class Principal {
 
     // {} {} {} {} {} {} {} {} {} SWITCH GESTIONAR ENTRENADORES {} {} {} {} {} {} {} {} {} //
 
+    //Complejidad temporal: O(N) Tiempo lineal
     public static void switchMenuGestionarEntrenadores(int option){ //✅|
 
         switch (option){
@@ -337,7 +341,8 @@ public class Principal {
     }//cierra switchMenuGestionarEntrenadores
 
     // [] [] [] [] [] [] [] [] [] SUBMENU SELECCIONAR ENTRENADORES [] [] [] [] [] [] [] [] [] //
-    
+
+    //Complejidad temporal: O(N) Tiempo lineal
     public static void subMenuSeleccionarEntrenadores(){ //✅
 
         entrenadorSeleccionado = 0; //Reset
@@ -393,6 +398,7 @@ public class Principal {
 
     // [] [] [] [] [] [] [] [] [] SUBMENU NOMBRE ENTRENADOR [] [] [] [] [] [] [] [] [] //
 
+    //Complejidad temporal: O(1) Tiempo constante
     public static void subMenuNombreEntrenador(int entrenadorSeleccionado){ //✅
 
         System.out.println("       ,___          .-;'   |  | » » » OPCIONES DE ENTRENADOR « « « |  |   ';-.          ___,\n" + //
@@ -415,6 +421,7 @@ public class Principal {
 
     // {} {} {} {} {} {} {} {} {} SWITCH NOMBRE ENTRENADOR {} {} {} {} {} {} {} {} {} //
 
+    //Complejidad temporal: O(1) Tiempo constante
     public static void switchNombreEntrenador(int option, int entrenadorSeleccionado){ //✅
         switch (option){ //✅
             case 1: //✅
@@ -566,6 +573,7 @@ public class Principal {
 
     // [] [] [] [] [] [] [] [] [] POKEMONES EQUIPO 6 [] [] [] [] [] [] [] [] [] //
 
+    //Complejidad temporal: O(N) Tiempo lineal
     public static Pokemon pokemonesEquipo6(int entrenadorSeleccionado){ //✅
 
         for (int i = 0; i < pokemonesDisponibles.size(); i++) {
@@ -581,6 +589,7 @@ public class Principal {
 
     // {} {} {} {} {} {} {} {} {} SWITCH POKEMONES EQUIPO 6 {} {} {} {} {} {} {} {} {} //
 
+    //Complejidad temporal: O(1) Tiempo constante
     public static Pokemon switchPokemonesEquipo6(int option, int entrenadorSeleccionado){ //✅🅿️
         switch (option) {
             case 1: //🅿️
@@ -654,6 +663,7 @@ public class Principal {
 
     // [] [] [] [] [] [] [] [] [] MENU GESTIONAR POKEMONES [] [] [] [] [] [] [] [] [] //
 
+    //Complejidad temporal: O(N) Tiempo lineal
     public static void menuGestionarPokemones(){ //✅
         while (firstMenuGestionarPokemones == true){
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -683,6 +693,7 @@ public class Principal {
 
     // {} {} {} {} {} {} {} {} {} SWITCH GESTIONAR POKEMONES {} {} {} {} {} {} {} {} {} //
 
+    //Complejidad temporal: O(N) Tiempo lineal
     public static void switchMenuGestionarPokemones(int option){ //✅
         switch (option){
             case 1: //✅
@@ -797,6 +808,7 @@ public class Principal {
     
     // [] [] [] [] [] [] [] [] [] MENU INICIAR BATALLA [] [] [] [] [] [] [] [] [] //
 
+    //Complejidad temporal: O(N) Tiempo lineal
     public static void menuIniciarBatalla(){ //✅
         while (firstMenuIniciarBatalla == true){
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -826,7 +838,8 @@ public class Principal {
     }//cierra menuIniciarBatalla
 
     // {} {} {} {} {} {} {} {} {} SWITCH INICIAR BATALLA {} {} {} {} {} {} {} {} {} //
-    
+
+    //Complejidad temporal: O(N) Tiempo lineal
     public static void switchIniciarBatalla(int option){ //✅
         switch (option){
             case 1: //✅
@@ -997,6 +1010,7 @@ public class Principal {
 
     // [] [] [] [] [] [] [] [] [] SUBMENU DURANTE LA BATALLA [] [] [] [] [] [] [] [] [] //
 
+    //Complejidad temporal: O(N) Tiempo lineal
     public static void subMenuDuranteLaBatalla(String nombrePokemonGanador){ //✅
         while (firstSubMenuDuranteLaBatalla) {
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -1030,7 +1044,8 @@ public class Principal {
     }//cierra menuIniciarBatalla
 
     // {} {} {} {} {} {} {} {} {} SWITCH DURANTE LA BATALLA {} {} {} {} {} {} {} {} {} //
-    
+
+    //Complejidad temporal: O(N) Tiempo lineal
     public static void switchSubMenuDuranteLaBatalla(int option, String nombrePokemonGanador){ //🅿️
         switch (option){
             case 1: //✅
@@ -1210,6 +1225,7 @@ public class Principal {
 
     // [] [] [] [] [] [] [] [] [] SALIR [] [] [] [] [] [] [] [] []//
 
+    //Complejidad temporal: O(1) Tiempo constante
     public static void salir(){ //✅
         System.out.println(" \n \n \n \n \n \n "); //Espacio visual
         System.out.println("» » » Saliendo de PokeMondonGo « « «");
@@ -1392,7 +1408,8 @@ public class Principal {
     }//cierra interfazPokeMondonGo
     
     // () () () () () () () () () VALIDACION () () () () () () () () () //
-    
+
+    //Complejidad temporal: O(N) Tiempo lineal
     public static int check(){ //✅
 
         option = 0; //Reset de option.
@@ -1418,6 +1435,7 @@ public class Principal {
 
     // () () () () () () () () () MINI MENU () () () () () () () () () //
 
+    //Complejidad temporal: O(1) Tiempo constante
     public static void miniMenu(int actual){ //✅
         System.out.println("");
         System.out.println("                  > > > ¿Qué deseas hacer? < < <");
@@ -1440,6 +1458,7 @@ public class Principal {
     
     // () () () () () () () () () MENUS GLOBALES () () () () () () () () () //
 
+    //Complejidad temporal: O(1) Tiempo constante
     public static void menusGlobales(int menuOpt){ //🅿️
 
         switch (menuOpt) {
