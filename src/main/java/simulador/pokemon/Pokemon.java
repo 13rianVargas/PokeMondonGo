@@ -61,12 +61,14 @@ public abstract class Pokemon implements Serializable{
 
     // Métodos //
 
+    //Complejidad temporal: O(1) Tiempo constante
     public double atacar(Pokemon oponente) { //✅
         double multiplicador = TipoPokemon.obtenerMultiplicadorDeDaño(this.tipo, oponente.getTipo());
         double daño = this.puntosDeAtaque * multiplicador;
         return daño;
     }//cierra atacar
 
+    //Complejidad temporal: O(1) Tiempo constante
     public void recibirDaño(double daño) { //✅
         this.salud -= daño;
         if (this.salud <= 0) {
@@ -78,6 +80,7 @@ public abstract class Pokemon implements Serializable{
         }//cierra if
     }//cierra recibirDaño
 
+    //Complejidad temporal: O(1) Tiempo constante
     public void entrenar() {//✅
 
         this.puntosDeAtaque += 20;
