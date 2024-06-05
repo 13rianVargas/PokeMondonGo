@@ -88,4 +88,4 @@ public abstract class Pokemon implements Serializable{
 
     }//cierra entrenar
 
-}
+}//cierra class
