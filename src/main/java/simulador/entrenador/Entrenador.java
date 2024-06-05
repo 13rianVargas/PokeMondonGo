@@ -60,7 +60,7 @@ public class Entrenador implements Serializable{ //✅
         }//cierra if-else
     }//cierra entrenarPokemon
 
-    //Complejidad temporal: O(1) Tiempo constante
+    //Complejidad temporal: O(N) Tiempo lineal
     public void mostrarPokemones(){ //✅
         if (pokeLista.isEmpty()) {
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -81,7 +81,7 @@ public class Entrenador implements Serializable{ //✅
         
     }//cierra mostrarPokemon
 
-    //Complejidad temporal: O(1) Tiempo constante
+    //Complejidad temporal: O(N) Tiempo linea
     public void mostrarPokemonesIndex(){ //✅
         if (pokeLista.isEmpty()) {
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
