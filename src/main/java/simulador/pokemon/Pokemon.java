@@ -73,7 +73,7 @@ public abstract class Pokemon implements Serializable{
             this.salud = 0;
             this.estado = Estado.DEBILITADO;
             System.out.println(" \n \n \n \n "); //Espacio visual TODO: Revisar altura.
-            System.out.println(this.nombre + " ha sido debilitado.");
+            System.out.println(" ⭐️ ⭐️ ⭐️ ¡ " + this.nombre + " ha sido debilitado ! 💤 ⭐️ ⭐️ ⭐️");
             System.out.println(" \n \n \n \n "); //Espacio visual TODO: Revisar altura.
         }//cierra if
     }//cierra recibirDaño

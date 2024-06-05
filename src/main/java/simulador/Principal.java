@@ -104,9 +104,6 @@ public class Principal {
 
 
 
-
-
-
     // > > > > > > > > > > > > > > > > > M E N U S  &  S W I T C H E S < < < < < < < < < < < < < < < < < //
 
 
@@ -473,7 +470,7 @@ public class Principal {
                 subMenuNombreEntrenador(entrenadorSeleccionado);
 
                 break;
-            case 3: //PENDIENTE
+            case 3: //✅
 
                 System.out.println(" \n \n \n \n \n \n"); //Espacio visual
                 System.out.println("¡Has seleccionado « Entrenar pokémon » !");     
@@ -1010,20 +1007,26 @@ public class Principal {
 
         wait(4);
 
+        if (tales) {
+            //TODO: @ALEX
+            System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+            System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
+            System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+            
+            wait(3);
 
-        System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
-        System.out.println(" \n \n \n \n \n \n"); //Espacio visual
-        
-        wait(3);
-
-        System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
-        System.out.println(" \n \n \n "); //Espacio visual
-        System.out.println("(1) | "+ pokemonBatalla1.getNombre() + " -> Atacar.");
-        System.out.println("(2) | "+ pokemonBatalla2.getNombre() + " -> Atacar.");
-        System.out.println("(3) | Finalizar batalla.");
+            System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
+            System.out.println(" \n \n \n "); //Espacio visual
+            System.out.println("(1) | "+ pokemonBatalla1.getNombre() + " -> Atacar.");
+            System.out.println("(2) | "+ pokemonBatalla2.getNombre() + " -> Atacar.");
+            System.out.println("(3) | Finalizar batalla.");
 
 
-        switchSubMenuDuranteLaBatalla(check(), nombrePokemonGanador);
+            switchSubMenuDuranteLaBatalla(check(), nombrePokemonGanador);
+        } else{
+            //TODO: @ALEX
+            menuIniciarBatalla();
+        }//cierra else-if
     }//cierra menuIniciarBatalla
 
     // {} {} {} {} {} {} {} {} {} SWITCH DURANTE LA BATALLA {} {} {} {} {} {} {} {} {} //
@@ -1035,7 +1038,8 @@ public class Principal {
                 wait(sg);
 
                 if (pokemonBatalla2.getEstado().equals(Estado.NORMAL)) {
-                    
+
+                    System.out.println(" \n \n \n \n "); //Espacio visual
                     System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
                     System.out.println(" \n \n "); //Espacio visual
                     System.out.println( pokemonBatalla1.getNombre() + " Ha atacado a " + pokemonBatalla2.getNombre());
@@ -1043,6 +1047,7 @@ public class Principal {
 
                     wait(sg);
 
+                    System.out.println(" \n \n \n \n "); //Espacio visual
                     System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
                     System.out.println(" \n \n \n"); //Espacio visual
                     System.out.println( " ¡ El ataque ha sido eficaz ! ");
@@ -1073,18 +1078,35 @@ public class Principal {
                     System.out.println("");
                     System.out.print("Escoge una opción: ");
 
-                    if (check()==1) {
-                        miniMenu(7);
-                    }else if (check()==2) {
-                        salir();
-                    }else if (check() != 1 && check() !=2) {
-                        System.out.println("Ingrese una opción válida");
-                    }
+                    boolean v = true;
+
+                    while (v == true) {
+                        check();
+                    
+                        if (option == 1) {
+                            v = false;
+
+                            System.out.println(" \n \n \n \n \n \n "); //Espacio visual
+                            System.out.println("Volviendo al menú anterior...");
+                            System.out.println(" \n \n \n \n \n \n "); //Espacio visual
+
+                            wait(sg);
+
+                            menuIniciarBatalla();
+                        }else if (option == 2) {
+                            v = false;
+                            salir();
+                        }else if (option == 1 && option == 2) {
+                            System.out.println("Ingrese una opción válida");
+                            v =true;
+                        }//cierra else-if
+
+                    }//cierra while
+
                 }//cierra else-if
 
-                wait(sg);
+                subMenuDuranteLaBatalla(nombrePokemonGanador);
 
-                
                 break;
             case 2: //✅
 
@@ -1092,6 +1114,7 @@ public class Principal {
 
                 if (pokemonBatalla1.getEstado().equals(Estado.NORMAL)) {
 
+                    System.out.println(" \n \n \n \n "); //Espacio visual
                     System.out.println("[ " + pokemonBatalla2.getNombre() + " ] VS [ " + pokemonBatalla1.getNombre() + " ]");
                     System.out.println(" \n \n "); //Espacio visual
                     System.out.println( pokemonBatalla2.getNombre() + " Ha atacado a " + pokemonBatalla1.getNombre());
@@ -1099,6 +1122,7 @@ public class Principal {
 
                     wait(sg);
 
+                    System.out.println(" \n \n \n \n "); //Espacio visual
                     System.out.println("[ " + pokemonBatalla2.getNombre() + " ] VS [ " + pokemonBatalla1.getNombre() + " ]");
                     System.out.println(" \n \n \n"); //Espacio visual
                     System.out.println( " ¡ El ataque ha sido eficaz ! ");
@@ -1130,26 +1154,50 @@ public class Principal {
                     System.out.println("");
                     System.out.print("Escoge una opción: ");
 
-                    if (check()==1) {
-                        miniMenu(7);
-                    }else if (check()==2) {
-                        salir();
-                    }else if (check() != 1 && check() !=2) {
-                        System.out.println("Ingrese una opción válida");
-                    }
+                    boolean v = true;
+
+                    while (v == true) {
+                        check();
+                    
+                        if (option == 1) {
+                            v = false;
+
+                            System.out.println(" \n \n \n \n \n \n "); //Espacio visual
+                            System.out.println("Volviendo al menú anterior...");
+                            System.out.println(" \n \n \n \n \n \n "); //Espacio visual
+
+                            wait(sg);
+
+                            menuIniciarBatalla();
+                        }else if (option == 2) {
+                            v = false;
+                            salir();
+                        }else if (option == 1 && option == 2) {
+                            System.out.println("Ingrese una opción válida");
+                            v =true;
+                        }//cierra else-if
+                        
+                    }//cierra while
+
                 }//cierra else-if
 
-                wait(sg);
-                
-                
+                subMenuDuranteLaBatalla(nombrePokemonGanador);
+
                 break;
-            case 3: //🅿️
+            case 3: //✅
                 
-                miniMenu(7);
-                break;
-            default: //🅿️
                 System.out.println(" \n \n \n \n \n \n "); //Espacio visual
-                System.out.println("¡ Debes seleccionar una opción válida s!");
+                System.out.println("Volviendo al menú anterior...");
+                System.out.println(" \n \n \n \n \n \n "); //Espacio visual
+
+                wait(sg);
+
+                menuIniciarBatalla();
+
+                break;
+            default: //✅
+                System.out.println(" \n \n \n \n \n \n "); //Espacio visual
+                System.out.println("¡ Debes seleccionar una opción válida !");
                 System.out.println(" \n \n \n \n \n \n "); //Espacio visual
 
                 wait(sg);
