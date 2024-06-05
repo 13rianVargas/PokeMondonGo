@@ -56,8 +56,9 @@ public class Principal {
     // > > > > > > > > > > > > > > > > > > > > > M A I N < < < < < < < < < < < < < < < < < < < < < //
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
-
-        final String NOMBRE_ARCHIVO = "ListaDePokemones.pokemondongo";
+        
+        final String Archivo_Pokemones = "ListaDePokemones.pokemondongo";
+        final String Archivo_Entrenadores = "ListaDeEntrenadores.pokemondongo";
         
                             // 🚫 N O   D E S C O M E N T A R 🚫 //
         /*/ <> <> <> <> <> <> INICIALIZACIÓN DE DATOS <> <> <> <> <> <> //
@@ -83,12 +84,14 @@ public class Principal {
         Pokemon Tentacool = new Tentacool("Tentacool", 90, 85, TipoPokemon.AGUA.VENENO); //🅿️ TODO:Dos tipos.
         pokemonesDisponibles.add(Tentacool);
 
-        ArchivosConexion.guardar(pokemonesDisponibles, NOMBRE_ARCHIVO);
-
+        ArchivosConexion.guardar(pokemonesDisponibles, Archivo_Pokemones);
+        ArchivosConexion.guardar(pokeEntrenadores, Archivo_Entrenadores);
+        
         // <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> */
 
         // Leer datos guardados //
-        pokemonesDisponibles = (LinkedList<Pokemon>)ArchivosConexion.leer(NOMBRE_ARCHIVO);
+        pokemonesDisponibles = (LinkedList<Pokemon>)ArchivosConexion.leer(Archivo_Pokemones);
+        pokeEntrenadores = (LinkedList<Entrenador>)ArchivosConexion.leer(Archivo_Entrenadores); //TODO
 
         interfazDeCarga(); //✅
         //interfazPokeMondonGo(); //✅
@@ -1007,8 +1010,8 @@ public class Principal {
 
         wait(4);
 
-        if (tales) {
-            //TODO: @ALEX
+        if (pokemonBatalla1.getSalud() > 0 && pokemonBatalla2.getSalud() > 0) {
+            
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
             System.out.println("[ " + pokemonBatalla1.getNombre() + " ] VS [ " + pokemonBatalla2.getNombre() + " ]");
             System.out.println(" \n \n \n \n \n \n"); //Espacio visual
@@ -1024,8 +1027,19 @@ public class Principal {
 
             switchSubMenuDuranteLaBatalla(check(), nombrePokemonGanador);
         } else{
-            //TODO: @ALEX
-            menuIniciarBatalla();
+            
+            System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+            System.out.println("[ ⭐️ ⭐️ ⭐️ LA BATALLA HA TERMINADO ⭐️ ⭐️ ⭐️ ]");
+            System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+
+            wait(sg);
+
+            System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+            System.out.println("Volviendo al menú anterior...");
+            System.out.println(" \n \n \n \n \n \n"); //Espacio visual
+
+            menu1();
+
         }//cierra else-if
     }//cierra menuIniciarBatalla
 
@@ -1215,7 +1229,7 @@ public class Principal {
         System.out.println("» » » Saliendo de PokeMondonGo « « «");
         System.out.println(" \n \n \n \n \n \n "); //Espacio visual
 
-        guardarPartida(pokemonesDisponibles, "ListaDePokemones.pokemondongo");
+        guardarPartida(pokemonesDisponibles, pokeEntrenadores, "ListaDePokemones.pokemondongo", "ListaDeEntrenadores.pokemondongo");
         
         wait(sg);
 
@@ -1485,9 +1499,10 @@ public class Principal {
     
     // () () () () () () () () () GUARDAR ARCHIVO () () () () () () () () () //
 
-    public static void guardarPartida(LinkedList<Pokemon> pokemonesDisponibles, String NOMBRE_ARCHIVO){ //✅
+    public static void guardarPartida(LinkedList<Pokemon> pokemonesDisponibles, LinkedList<Entrenador> pokeEntrenadores, String Archivo_Pokemones, String Archivo_Entrenadores){ //✅
 
-        ArchivosConexion.guardar(pokemonesDisponibles, NOMBRE_ARCHIVO);
+        ArchivosConexion.guardar(pokemonesDisponibles, Archivo_Pokemones);
+        ArchivosConexion.guardar(pokeEntrenadores, Archivo_Entrenadores);
 
     }//cierra guardarPartida
 
